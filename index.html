@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مكتب الإبراهيم إخوان للعمران</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #fff;
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    h1, h2 {
+      color: #ffd700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, #4b1c1c, #000);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hero-images {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .hero-img {
+      width: 48%;
+      border-radius: 10px;
+      border: 3px solid #ffd700;
+      box-shadow: 0 0 15px #800000;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-img:hover {
+      transform: scale(1.05);
+    }
+
+    .scroll-banner {
+      background-color: #800000;
+      color: #fff;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .scroll-banner.reverse {
+      background-color: #4b1c1c;
+    }
+
+    .scroll-text {
+      display: inline-block;
+      animation: scroll-right 25s linear infinite;
+    }
+
+    @keyframes scroll-right {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .services, .about-us, .contact, .client-requests {
+      padding: 40px 20px;
+      border-top: 2px solid #ffd700;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      margin-bottom: 10px;
+      padding: 5px;
+      background-color: #2a2a2a;
+      border-radius: 5px;
+    }
+
+    .gallery-section {
+      padding: 40px 20px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+      border: 3px solid #ffd700;
+      box-shadow: 0 0 15px #800000;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .client-requests form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .client-requests label {
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .client-requests input,
+    .client-requests select,
+    .client-requests textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #444;
+      color: #fff;
+    }
+
+    .client-requests button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #ffd700;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .client-requests button:hover {
+      background-color: #e6c200;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>مكتب الإبراهيم إخوان للعمران</h1>
+    <p>ترميم • تعهدات • إكساء • تنفيذ كافة أعمال التصاميم الداخلية</p>
+    <div class="hero-images">
+      <img src="images/work-right.jpg" alt="عمل من الجهة اليمنى" class="hero-img" />
+      <img src="images/work-left.jpg" alt="عمل من الجهة اليسرى" class="hero-img" />
+    </div>
+    <div class="scroll-banner">
+      <div class="scroll-text">تمديد الكهرباء • ديكور جبسي • مطابخ ألمنيوم • أبواب خشب • رخام فاخر • واجهات حجرية</div>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>أعمالنا</h2>
+    <ul>
+      <li>تمديد الصحة والكهرباء</li>
+      <li>الياسة والطينة</li>
+      <li>تلبيس السيراميك للجدران والأرضيات والأسقف</li>
+      <li>تفصيل وتركيب الأبواب والنوافذ الخشبية</li>
+      <li>مطابخ ألمنيوم هاي غلوس، أبواب، نوافذ، واجهات</li>
+      <li>رخام وغرانيت طبيعي وصناعي</li>
+      <li>ديكور جبسي وبلاستيكي</li>
+      <li>بدائل خشب، رخام، سيراميك، شيبورد</li>
+      <li>معجونة ودهان وديكوراتها</li>
+      <li>قشط وبخ موبيليا</li>
+    </ul>
+  </section>
+
+  <div class="scroll-banner reverse">
+    <div class="scroll-text">عروض خاصة على الإكساء الكامل مع التصاميم الداخلية • خصومات موسمية • تنفيذ احترافي بأسعار منافسة</div>
+  </div>
+
+  <section class="gallery-section">
+    <h2>معرض أعمالنا</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="images/aluminum-door1.jpg" alt="أبواب ألمنيوم"></div>
+      <div class="gallery-item"><img src="images/wood-main.jpg" alt="أبواب خشب"></div>
+      <div class="gallery-item"><img src="images/marble-main.jpg" alt="رخام فاخر"></div>
+      <div class="gallery-item"><img src="images/stone-main.jpg" alt="واجهات حجرية"></div>
+    </div>
+  </section>
+
+  <section class="about-us">
+    <h2>من نحن</h2>
+    <p>مكتب الإبراهيم إخوان للعمران لتأمين كافة ما يتطلبه البيت الأنيق. ورشات متكاملة تهتم بأدق التفاصيل، نعمل بأفضل الخامات من النوع الأول. دقة في العمل، التزام بالمواعيد، إشراف مهندسين وفنيين وكفاءات عالية.</p>
+  </section>
+
+  <section class="contact">
+    <h2>تواصل معنا</h2>
+    <p>📱 محمد الإبراهيم: 00963995607888</p>
+    <p>📱 عبدالله الإبراهيم: 00963980007563</p>
+    <p>📧 الإيميل: alomran.s197@gmail.com</p>
+    <a href="https://wa.me/963995607888" class="whatsapp-button">راسلنا على واتساب</a>
+  </section>
+
+  <section class="client-requests">
+    <h2>طلبات العملاء</h2>
+    <form action="mailto:alomran.s197@gmail.com" method="post" enctype="text/plain">
+      <label for="name">الاسم الكامل:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">رقم الهاتف أو واتساب:</label>
+      <input type="text" id="phone" name="phone" required>
+
+      <label for="service">نوع الخدمة المطلوبة:</label>
+      <select id="service" name="service">
+        <option value="تشطيب كامل">تشطيب كامل</option>
+        <option value="ديكور داخلي">ديكور داخلي</option>
+        <option value="أبواب ونوافذ">أبواب ونوافذ</option>
+        <option value="رخام وغرانيت">رخام وغرانيت</option>
+        <option value="مطابخ ألمنيوم">مطابخ ألمنيوم</

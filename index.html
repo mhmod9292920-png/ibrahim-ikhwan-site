@@ -3,162 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مكتب الإبراهيم إخوان للعمران</title>
+  <title>طلبات العملاء - مكتب الإبراهيم</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Cairo', sans-serif;
       background-color: #1a1a1a;
       color: #fff;
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      padding: 0;
+      padding: 20px;
       line-height: 1.8;
     }
 
-    h1, h2 {
+    h2 {
       color: #ffd700;
       text-align: center;
       margin-bottom: 20px;
     }
 
-    .hero {
-      background: linear-gradient(to bottom, #4b1c1c, #000);
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .hero-images {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 30px;
-    }
-
-    .hero-img {
-      width: 48%;
-      border-radius: 10px;
-      border: 3px solid #ffd700;
-      box-shadow: 0 0 15px #800000;
-      transition: transform 0.3s ease;
-    }
-
-    .hero-img:hover {
-      transform: scale(1.05);
-    }
-
-    .scroll-banner {
-      background-color: #800000;
-      color: #fff;
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 10px;
-      font-weight: bold;
-    }
-
-    .scroll-banner.reverse {
-      background-color: #4b1c1c;
-    }
-
-    .scroll-text {
-      display: inline-block;
-      animation: scroll-right 25s linear infinite;
-    }
-
-    @keyframes scroll-right {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-
-    .services, .about-us, .contact, .client-requests {
-      padding: 40px 20px;
-      border-top: 2px solid #ffd700;
-    }
-
-    .services ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .services li {
-      margin-bottom: 10px;
-      padding: 5px;
-      background-color: #2a2a2a;
-      border-radius: 5px;
-    }
-
-    .gallery-section {
-      padding: 40px 20px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      border-radius: 10px;
-      border: 3px solid #ffd700;
-      box-shadow: 0 0 15px #800000;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-item img:hover {
-      transform: scale(1.05);
-    }
-
-    .client-requests form {
+    .client-requests {
       max-width: 600px;
       margin: auto;
-      display: flex;
-      flex-direction: column;
+      background-color: #2a2a2a;
+      padding: 30px;
+      border-radius: 10px;
+      border: 2px solid #ffd700;
     }
 
-    .client-requests label {
+    label {
+      display: block;
       margin-top: 15px;
-      margin-bottom: 5px;
       font-weight: bold;
     }
 
-    .client-requests input,
-    .client-requests select,
-    .client-requests textarea {
+    input, select, textarea {
+      width: 100%;
       padding: 10px;
+      margin-top: 5px;
       border-radius: 5px;
       border: none;
       background-color: #444;
       color: #fff;
     }
 
-    .client-requests button {
+    button {
       margin-top: 20px;
       padding: 12px;
-      background-color: #ffd700;
-      color: #000;
+      background-color: #25D366;
+      color: #fff;
       border: none;
       border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    .client-requests button:hover {
-      background-color: #e6c200;
-    }
-
-    .whatsapp-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
+    button:hover {
+      background-color: #1da851;
     }
   </style>
 </head>
 <body>
+
+  <section class="client-requests">
+    <h2>طلبات العملاء</h2>
+    <form id="whatsapp-form">
+      <label for="name">الاسم الكامل:</label>
+      <input type="text" id="name" required>
+
+      <label for="phone">رقم الهاتف أو واتساب:</label>
+      <input type="text" id="phone" required>
+
+      <label for="service">نوع الخدمة المطلوبة:</label>
+      <select id="service">
+        <option value="تشطيب كامل">تشطيب كامل</option>
+        <option value="ديكور داخلي">ديكور داخلي</option>
+        <option value="أبواب ونوافذ">أبواب ونوافذ</option>
+        <option value="رخام وغرانيت">رخام وغرانيت</option>
+        <option value="مطابخ ألمنيوم">مطابخ ألمنيوم</option>
+        <option value="أخرى">أخرى</option>
+      </select>
+
+      <label for="details">تفاصيل إضافية:</label>
+      <textarea id="details" rows="5" required></textarea>
+
+      <button type="submit">إرسال الطلب عبر واتساب</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById("whatsapp-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const service = document.getElementById("service").value;
+      const details = document.getElementById("details").value;
+
+      const message = `الاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالخدمة المطلوبة: ${service}%0Aتفاصيل: ${details}`;
+      window.open(`https://wa.me/963995607888?text=${message}`, "_blank");
+    });
+  </script>
+
+</body>
+</html>
+
 
   <section class="hero">
     <h1>مكتب الإبراهيم إخوان للعمران</h1>
@@ -215,19 +161,47 @@
     <a href="https://wa.me/963995607888" class="whatsapp-button">راسلنا على واتساب</a>
   </section>
 
-  <section class="client-requests">
-    <h2>طلبات العملاء</h2>
-    <form action="mailto:alomran.s197@gmail.com" method="post" enctype="text/plain">
-      <label for="name">الاسم الكامل:</label>
-      <input type="text" id="name" name="name" required>
+<section class="client-requests">
+  <h2>طلبات العملاء</h2>
+  <form id="whatsapp-form">
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" required>
 
-      <label for="phone">رقم الهاتف أو واتساب:</label>
-      <input type="text" id="phone" name="phone" required>
+    <label for="phone">رقم الهاتف أو واتساب:</label>
+    <input type="text" id="phone" required>
 
-      <label for="service">نوع الخدمة المطلوبة:</label>
-      <select id="service" name="service">
-        <option value="تشطيب كامل">تشطيب كامل</option>
-        <option value="ديكور داخلي">ديكور داخلي</option>
-        <option value="أبواب ونوافذ">أبواب ونوافذ</option>
-        <option value="رخام وغرانيت">رخام وغرانيت</option>
-        <option value="مطابخ ألمنيوم">مطابخ ألمنيوم</
+    <label for="service">نوع الخدمة المطلوبة:</label>
+    <select id="service">
+      <option value="تشطيب كامل">تشطيب كامل</option>
+      <option value="ديكور داخلي">ديكور داخلي</option>
+      <option value="أبواب ونوافذ">أبواب ونوافذ</option>
+      <option value="رخام وغرانيت">رخام وغرانيت</option>
+      <option value="مطابخ ألمنيوم">مطابخ ألمنيوم</option>
+      <option value="أخرى">أخرى</option>
+    </select>
+
+    <label for="details">تفاصيل إضافية:</label>
+    <textarea id="details" rows="5" required></textarea>
+
+    <button type="submit">إرسال الطلب عبر واتساب</button>
+  </form>
+</section>
+
+<script>
+  document.getElementById("whatsapp-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const service = document.getElementById("service").value;
+    const details = document.getElementById("details").value;
+
+    const message = `الاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالخدمة المطلوبة: ${service}%0Aتفاصيل: ${details}`;
+    window.open(`https://wa.me/963995607888?text=${message}`, "_blank");
+  });
+</script>
+ 
+
+</body>
+</html>
+
+    

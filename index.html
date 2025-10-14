@@ -3,30 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>طلبات العملاء - مكتب الإبراهيم</title>
+  <title>مكتب الإبراهيم إخوان للعمران</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Cairo', sans-serif;
       background-color: #1a1a1a;
       color: #fff;
-      padding: 20px;
-      line-height: 1.8;
+      margin: 0;
+      padding: 0;
     }
 
-    h2 {
-      color: #ffd700;
+    header.hero {
+      background: linear-gradient(to right, #2a2a2a, #1a1a1a);
       text-align: center;
+      padding: 40px 20px;
+      color: #ffd700;
+    }
+
+    header.hero h1 {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    header.hero p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    marquee {
+      background-color: #222;
+      color: #ffd700;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #ffd700;
       margin-bottom: 20px;
     }
 
+    .services-list, .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-item, .gallery-item {
+      background-color: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
     .client-requests {
-      max-width: 600px;
-      margin: auto;
       background-color: #2a2a2a;
       padding: 30px;
       border-radius: 10px;
       border: 2px solid #ffd700;
+      max-width: 600px;
+      margin: 40px auto;
     }
 
     label {
@@ -54,6 +103,7 @@
       border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
+      width: 100%;
     }
 
     button:hover {
@@ -63,8 +113,46 @@
 </head>
 <body>
 
+  <header class="hero">
+    <h1>مكتب الإبراهيم إخوان للعمران</h1>
+    <p>تنفيذ كافة أعمال الإكساء والتصاميم الداخلية باحترافية عالية</p>
+  </header>
+
+  <marquee behavior="scroll" direction="right">
+    عروض خاصة على الإكساء الكامل مع التصاميم الداخلية • خصومات موسمية • تنفيذ احترافي بأسعار منافسة
+  </marquee>
+
+  <!-- قسم أعمالنا -->
+  <section id="our-work">
+    <h2>أعمالنا</h2>
+    <div class="services-list">
+      <div class="service-item">تمديد الصحة والكهرباء</div>
+      <div class="service-item">الياسة والطينة</div>
+      <div class="service-item">تلبيس السيراميك للجدران والأرضيات</div>
+      <div class="service-item">تفصيل وتركيب الأبواب والنوافذ الخشبية</div>
+      <div class="service-item">مطابخ ألمنيوم هاي غلوس</div>
+      <div class="service-item">واجهات رخام وغرانيت طبيعي وصناعي</div>
+      <div class="service-item">ديكور جبسي وبلاستيكي</div>
+      <div class="service-item">بدائل خشب، رخام، سيراميك، شيبورد</div>
+      <div class="service-item">دهان ومعجونة وديكوراتها</div>
+    </div>
+  </section>
+
+  <!-- قسم معرض الصور -->
+  <section id="gallery">
+    <h2>معرض الصور</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="images/aluminum-door.jpg" alt="باب ألمنيوم"></div>
+      <div class="gallery-item"><img src="images/wood-door.jpg" alt="باب خشب"></div>
+      <div class="gallery-item"><img src="images/marble.jpg" alt="رخام فاخر"></div>
+      <div class="gallery-item"><img src="images/stone-facade.jpg" alt="واجهة حجرية"></div>
+    </div>
+  </section>
+
+  <!-- قسم طلبات العملاء -->
   <section class="client-requests">
     <h2>طلبات العملاء</h2>
+    <p>يرجى تعبئة النموذج وسنتواصل معك عبر واتساب</p>
     <form id="whatsapp-form">
       <label for="name">الاسم الكامل:</label>
       <input type="text" id="name" required>
@@ -98,6 +186,7 @@
       const details = document.getElementById("details").value;
 
       const message = `الاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالخدمة المطلوبة: ${service}%0Aتفاصيل: ${details}`;
+      alert("سيتم تحويلك إلى واتساب لإرسال الطلب");
       window.open(`https://wa.me/963995607888?text=${message}`, "_blank");
     });
   </script>
@@ -105,102 +194,5 @@
 </body>
 </html>
 
-
-  <section class="hero">
-    <h1>مكتب الإبراهيم إخوان للعمران</h1>
-    <p>ترميم • تعهدات • إكساء • تنفيذ كافة أعمال التصاميم الداخلية</p>
-    <div class="hero-images">
-      <img src="images/work-right.jpg" alt="عمل من الجهة اليمنى" class="hero-img" />
-      <img src="images/work-left.jpg" alt="عمل من الجهة اليسرى" class="hero-img" />
-    </div>
-    <div class="scroll-banner">
-      <div class="scroll-text">تمديد الكهرباء • ديكور جبسي • مطابخ ألمنيوم • أبواب خشب • رخام فاخر • واجهات حجرية</div>
-    </div>
-  </section>
-
-  <section class="services">
-    <h2>أعمالنا</h2>
-    <ul>
-      <li>تمديد الصحة والكهرباء</li>
-      <li>الياسة والطينة</li>
-      <li>تلبيس السيراميك للجدران والأرضيات والأسقف</li>
-      <li>تفصيل وتركيب الأبواب والنوافذ الخشبية</li>
-      <li>مطابخ ألمنيوم هاي غلوس، أبواب، نوافذ، واجهات</li>
-      <li>رخام وغرانيت طبيعي وصناعي</li>
-      <li>ديكور جبسي وبلاستيكي</li>
-      <li>بدائل خشب، رخام، سيراميك، شيبورد</li>
-      <li>معجونة ودهان وديكوراتها</li>
-      <li>قشط وبخ موبيليا</li>
-    </ul>
-  </section>
-
-  <div class="scroll-banner reverse">
-    <div class="scroll-text">عروض خاصة على الإكساء الكامل مع التصاميم الداخلية • خصومات موسمية • تنفيذ احترافي بأسعار منافسة</div>
-  </div>
-
-  <section class="gallery-section">
-    <h2>معرض أعمالنا</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="images/aluminum-door1.jpg" alt="أبواب ألمنيوم"></div>
-      <div class="gallery-item"><img src="images/wood-main.jpg" alt="أبواب خشب"></div>
-      <div class="gallery-item"><img src="images/marble-main.jpg" alt="رخام فاخر"></div>
-      <div class="gallery-item"><img src="images/stone-main.jpg" alt="واجهات حجرية"></div>
-    </div>
-  </section>
-
-  <section class="about-us">
-    <h2>من نحن</h2>
-    <p>مكتب الإبراهيم إخوان للعمران لتأمين كافة ما يتطلبه البيت الأنيق. ورشات متكاملة تهتم بأدق التفاصيل، نعمل بأفضل الخامات من النوع الأول. دقة في العمل، التزام بالمواعيد، إشراف مهندسين وفنيين وكفاءات عالية.</p>
-  </section>
-
-  <section class="contact">
-    <h2>تواصل معنا</h2>
-    <p>📱 محمد الإبراهيم: 00963995607888</p>
-    <p>📱 عبدالله الإبراهيم: 00963980007563</p>
-    <p>📧 الإيميل: alomran.s197@gmail.com</p>
-    <a href="https://wa.me/963995607888" class="whatsapp-button">راسلنا على واتساب</a>
-  </section>
-
-<section class="client-requests">
-  <form id="whatsapp-form">
-    <label for="name">الاسم الكامل:</label>
-    <input type="text" id="name" required>
-
-    <label for="phone">رقم الهاتف أو واتساب:</label>
-    <input type="text" id="phone" required>
-
-    <label for="service">نوع الخدمة المطلوبة:</label>
-    <select id="service">
-      <option value="تشطيب كامل">تشطيب كامل</option>
-      <option value="ديكور داخلي">ديكور داخلي</option>
-      <option value="أبواب ونوافذ">أبواب ونوافذ</option>
-      <option value="رخام وغرانيت">رخام وغرانيت</option>
-      <option value="مطابخ ألمنيوم">مطابخ ألمنيوم</option>
-      <option value="أخرى">أخرى</option>
-    </select>
-
-    <label for="details">تفاصيل إضافية:</label>
-    <textarea id="details" rows="5" required></textarea>
-
-    <button type="submit">إرسال الطلب عبر واتساب</button>
-  </form>
-</section>
-
-<script>
-  document.getElementById("whatsapp-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const service = document.getElementById("service").value;
-    const details = document.getElementById("details").value;
-
-    const message = `الاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالخدمة المطلوبة: ${service}%0Aتفاصيل: ${details}`;
-    window.open(`https://wa.me/963995607888?text=${message}`, "_blank");
-  });
-</script>
  
 
-</body>
-</html>
-
-    

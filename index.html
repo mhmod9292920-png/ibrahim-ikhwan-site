@@ -6,6 +6,7 @@
   <title>مكتب الإبراهيم إخوان للعمران</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
+    /* ===== إعداد عام ===== */
     body {
       font-family: 'Cairo', sans-serif;
       background-color: #1a1a1a;
@@ -14,6 +15,7 @@
       padding: 0;
     }
 
+    /* ===== رأس الصفحة ===== */
     header.hero {
       background: linear-gradient(to right, #2a2a2a, #1a1a1a);
       text-align: center;
@@ -38,6 +40,7 @@
       font-weight: bold;
     }
 
+    /* ===== الأقسام ===== */
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -47,10 +50,13 @@
     section h2 {
       text-align: center;
       color: #ffd700;
-      margin-bottom: 20px;
-      font-size: 26px;
+      font-size: 28px;
+      border-bottom: 2px solid #444;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
     }
 
+    /* ===== قائمة الخدمات ===== */
     .services-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -65,6 +71,30 @@
       text-align: center;
     }
 
+    /* ===== شريط التنقل للمعرض ===== */
+    .gallery-nav {
+      text-align: center;
+      margin-bottom: 30px;
+      background-color: #2a2a2a;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .gallery-nav a {
+      margin: 0 10px;
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .gallery-nav a:hover {
+      color: #fff;
+    }
+
+    /* ===== معاينة الصور ===== */
     .section-preview {
       display: flex;
       flex-wrap: wrap;
@@ -73,8 +103,14 @@
       margin-bottom: 40px;
     }
 
-    .section-preview a img {
+    .section-preview a {
+      text-decoration: none;
+      display: inline-block;
       width: 200px;
+    }
+
+    .section-preview a img {
+      width: 100%;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -85,6 +121,15 @@
       transform: scale(1.05);
     }
 
+    .section-preview p {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffd700;
+      text-align: center;
+    }
+
+    /* ===== شبكة الصور ===== */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -105,6 +150,7 @@
       transform: scale(1.05);
     }
 
+    /* ===== نموذج الطلب ===== */
     .client-requests {
       background-color: #2a2a2a;
       padding: 30px;
@@ -140,6 +186,7 @@
       font-weight: bold;
       cursor: pointer;
       width: 100%;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
@@ -147,7 +194,24 @@
     }
   </style>
 </head>
+
 <body>
+  <nav class="gallery-nav">
+  <a href="#marble">رخام</a>
+  <a href="#aluminum">ألمنيوم</a>
+  <a href="#wood">خشب</a>
+  <a href="#interior">تصميم داخلي</a>
+  <a href="#gypsum">جبس</a>
+  <a href="#stone">حجر</a>
+</nav>
+
+<nav style="position: sticky; top: 0; background-color: #1a1a1a; padding: 10px 20px; z-index: 1000; text-align: center; border-bottom: 1px solid #444;">
+  <a href="#services" style="margin: 0 15px; color: #ffd700; text-decoration: none;">أعمالنا</a>
+  <a href="#gallery-preview" style="margin: 0 15px; color: #ffd700; text-decoration: none;">معرض الصور</a>
+  <a href="#client-form" style="margin: 0 15px; color: #25D366; font-weight: bold; text-decoration: none;">📢 عرض الإكساء الكامل</a>
+  <a href="#contact" style="margin: 0 15px; color: #ffd700; text-decoration: none;">اتصل بنا</a>
+</nav>
+
 
   <!-- واجهة الموقع -->
   <header class="hero">
@@ -228,47 +292,19 @@
     </div>
   </section>
 
-  <section id="stone">
-    <h2>الحجر الخارجي</h2>
-    <div class="gallery-grid">
-      <img src="images/ex
-      <label for="details">تفاصيل إضافية:</label>
-      <textarea id="details" rows="5" required></textarea>
-
-<section id="stone">
+ <section id="stone">
   <h2>الحجر الخارجي</h2>
   <div class="gallery-grid">
     <img src="images/exterior-design/stone/stone-02.jpg" alt="حجر 02">
     <!-- تابع حتى stone-10 -->
   </div>
 </section>
+
+<div style="background-color: #ffd700; color: #1a1a1a; text-align: center; padding: 15px; font-weight: bold; font-size: 18px; margin: 40px auto; max-width: 800px; border-radius: 8px;">
+  🎉 عرض خاص: احصل على <span style="color: red;">خصم 10%</span> على الإكساء الكامل عند تقديم طلبك اليوم!
+</div>
      
-<section id="client-form">
-  <h2>طلبات الزبائن</h2>
-  <form id="whatsapp-form" class="client-requests">
-    <label for="name">الاسم الكامل:</label>
-    <input type="text" id="name" required>
 
-    <label for="phone">رقم الهاتف:</label>
-    <input type="tel" id="phone" required>
-
-    <label for="service">الخدمة المطلوبة:</label>
-    <select id="service" required>
-      <option value="">اختر الخدمة</option>
-      <option value="رخام">رخام</option>
-      <option value="ألمنيوم">ألمنيوم</option>
-      <option value="خشب">خشب</option>
-      <option value="تصميم داخلي">تصميم داخلي</option>
-      <option value="جبس">جبس</option>
-      <option value="حجر">حجر</option>
-    </select>
-
-    <label for="details">تفاصيل إضافية:</label>
-    <textarea id="details" rows="5" required></textarea>
-
-    <button type="submit">إرسال الطلب عبر واتساب</button>
-  </form>
-</section>
 
 <section id="contact">
   <h2>اتصل بنا</h2>

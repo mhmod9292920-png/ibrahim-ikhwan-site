@@ -235,24 +235,122 @@
       <label for="details">تفاصيل إضافية:</label>
       <textarea id="details" rows="5" required></textarea>
 
-      <button type="submit">إرسال الطلب عبر واتساب</button>
-    </form>
-  </section>
+<section id="stone">
+  <h2>الحجر الخارجي</h2>
+  <div class="gallery-grid">
+    <img src="images/exterior-design/stone/stone-02.jpg" alt="حجر 02">
+    <!-- تابع حتى stone-10 -->
+  </div>
+</section>
+     
+<section id="client-form">
+  <h2>طلبات الزبائن</h2>
+  <form id="whatsapp-form" class="client-requests">
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" required>
 
-  <script>
-    document.getElementById("whatsapp-form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const service = document.getElementById("service").value;
-      const details = document.getElementById("details").value;
+    <label for="phone">رقم الهاتف:</label>
+    <input type="tel" id="phone" required>
 
-      const message = `الاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالخدمة المطلوبة: ${service}%0Aتفاصيل: ${details}`;
-      alert("سيتم تحويلك إلى واتساب لإرسال الطلب");
-      window.open(`https://wa.me/963995607888?text=${message}`, "_blank");
-    });
-  </script>
+    <label for="service">الخدمة المطلوبة:</label>
+    <select id="service" required>
+      <option value="">اختر الخدمة</option>
+      <option value="رخام">رخام</option>
+      <option value="ألمنيوم">ألمنيوم</option>
+      <option value="خشب">خشب</option>
+      <option value="تصميم داخلي">تصميم داخلي</option>
+      <option value="جبس">جبس</option>
+      <option value="حجر">حجر</option>
+    </select>
 
+    <label for="details">تفاصيل إضافية:</label>
+    <textarea id="details" rows="5" required></textarea>
+
+    <button type="submit">إرسال الطلب عبر واتساب</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>اتصل بنا</h2>
+  <div class="client-requests">
+    <p>📍 الموقع: دمشق - بيت سحم</p>
+
+    <p>📞 محمد الإبراهيم: 
+      <a href="tel:+963995607888" style="color:#25D366;">00963 995 607 888</a>
+    </p>
+
+    <p>📞 عبدالله الإبراهيم: 
+      <a href="tel:+963980007563" style="color:#25D366;">00963 980 007 563</a>
+    </p>
+
+    <p>📧 البريد الإلكتروني: 
+      <a href="mailto:mhmod9292920@gmail.com" style="color:#ffd700;">mhmod9292920@gmail.com</a>
+    </p>
+
+    <p>💬 واتساب مباشر: 
+      <a href="https://wa.me/963995607888" target="_blank" style="color:#25D366;">تواصل مع محمد الإبراهيم</a><br>
+      <a href="https://wa.me/963980007563" target="_blank" style="color:#25D366;">تواصل مع عبدالله الإبراهيم</a>
+    </p>
+  </div>
+</section>
+
+<section id="client-form">
+  <h2>طلبات العملاء</h2>
+  <form id="whatsapp-form" class="client-requests">
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" placeholder="اكتب اسمك هنا" required>
+
+    <label for="phone">رقم الهاتف:</label>
+    <input type="tel" id="phone" placeholder="مثال: 00963xxxxxxxxx" required>
+
+    <label for="request">نوع الطلب:</label>
+    <select id="request" required>
+      <option value="">اختر نوع الطلب</option>
+      <option value="تمديد الصحة والكهرباء">تمديد الصحة والكهرباء</option>
+      <option value="تلبيس سيراميك">تلبيس سيراميك</option>
+      <option value="أبواب ونوافذ خشبية">أبواب ونوافذ خشبية</option>
+      <option value="مطابخ ألمنيوم">مطابخ ألمنيوم</option>
+      <option value="واجهات رخام">واجهات رخام</option>
+      <option value="ديكور جبسي">ديكور جبسي</option>
+      <option value="بدائل خشب ورخام">بدائل خشب ورخام</option>
+      <option value="دهان ومعجونة">دهان ومعجونة</option>
+      <option value="عرض على الإكساء الكامل">عرض على الإكساء الكامل</option>
+    </select>
+
+    <label for="details">تفاصيل إضافية:</label>
+    <textarea id="details" rows="5" placeholder="اكتب أي تفاصيل أو ملاحظات إضافية..." required></textarea>
+
+    <label for="recipient">اختر الشخص الذي تريد إرسال الطلب إليه:</label>
+    <select id="recipient" required>
+      <option value="">اختر المستلم</option>
+      <option value="963995607888">محمد الإبراهيم</option>
+      <option value="963980007563">عبدالله الإبراهيم</option>
+    </select>
+
+    <button type="submit">📤 إرسال الطلب عبر واتساب</button>
+  </form>
+</section>
+
+<script>
+  document.getElementById("whatsapp-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const request = document.getElementById("request").value;
+    const details = document.getElementById("details").value.trim();
+    const recipient = document.getElementById("recipient").value;
+
+    if (!recipient) {
+      alert("يرجى اختيار الشخص الذي تريد إرسال الطلب إليه.");
+      return;
+    }
+
+    const message = `طلب جديد من العميل:%0A👤 الاسم: ${name}%0A📞 الهاتف: ${phone}%0A🛠️ نوع الطلب: ${request}%0A📝 تفاصيل إضافية: ${details}`;
+    alert("✅ تم تجهيز الطلب وسيتم فتح واتساب الآن.");
+    window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(message)}`, "_blank");
+  });
+</script>
+      
 </body>
 </html>
 

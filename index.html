@@ -1,4 +1,4 @@
-زوىخكخح<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -7,6 +7,62 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
     body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .section-preview a img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .section-preview a img:hover {
+    transform: scale(1.05);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+  }
+</style>
+ 
       font-family: 'Cairo', sans-serif;
       background-color: #1a1a1a;
       color: #fff;
@@ -138,62 +194,50 @@
     </div>
   </section>
 
-<!-- قسم معرض الصور -->
-<section id="gallery">
-  <h2>معرض الصور</h2>
-  <div class="gallery-grid">
+<!-- قسم الرخام -->
+<h2 id="marble">تصاميم الرخام</h2>
+<div class="gallery-grid">
+  <!-- marble-02 إلى marble-10 -->
+  <img src="images/interior-design/kitchens/marble/marble-02.jpg" loading="lazy" alt="رخام 02">
+  <img src="images/interior-design/kitchens/marble/marble-03.jpg" loading="lazy" alt="رخام 03">
+  <!-- تابع حتى marble-10 -->
+</div>
 
-    <!-- صور الحجر -->
-    <div class="gallery-item"><img src="images/stone-wall-01.jpg" alt="واجهة حجرية 01"></div>
-    <div class="gallery-item"><img src="images/stone-wall-02.jpg" alt="واجهة حجرية 02"></div>
-    <div class="gallery-item"><img src="images/stone-wall-03.jpg" alt="واجهة حجرية 03"></div>
-    <div class="gallery-item"><img src="images/stone-wall-04.jpg" alt="واجهة حجرية 04"></div>
-    <div class="gallery-item"><img src="images/stone-wall-05.jpg" alt="واجهة حجرية 05"></div>
-    <div class="gallery-item"><img src="images/stone-wall-06.jpg" alt="واجهة حجرية 06"></div>
-    <div class="gallery-item"><img src="images/stone-wall-07.jpg" alt="واجهة حجرية 07"></div>
-    <div class="gallery-item"><img src="images/stone-wall-08.jpg" alt="واجهة حجرية 08"></div>
-    <div class="gallery-item"><img src="images/stone-wall-09.jpg" alt="واجهة حجرية 09"></div>
-    <div class="gallery-item"><img src="images/stone-wall-10.jpg" alt="واجهة حجرية 10"></div>
+<!-- قسم الألمنيوم -->
+<h2 id="aluminum">أبواب ألمنيوم</h2>
+<div class="gallery-grid">
+  <img src="images/aluminum-doors/aluminum-door-02.jpg" loading="lazy" alt="ألمنيوم 02">
+  <!-- تابع حتى aluminum-door-10 -->
+</div>
 
-    <!-- صور الرخام -->
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-01.jpg" alt="رخام فاخر 01"></div>
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-02.jpg" alt="رخام فاخر 02"></div>
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-03.jpg" alt="رخام فاخر 03"></div>
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-04.jpg" alt="رخام فاخر 04"></div>
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-05.jpg" alt="رخام فاخر 05"></div>
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-06.jpg" alt="رخام فاخر 06"></div>
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-07.jpg" alt="رخام فاخر 07"></div>
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-08.jpg" alt="رخام فاخر 08"></div>
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-09.jpg" alt="رخام فاخر 09"></div>
-    <div class="gallery-item"><img src="images/interior-design/kitchens/marble/marble-10.jpg" alt="رخام فاخر 10"></div>
+<!-- قسم أبواب خشب -->
+<h2 id="wood">أبواب خشبية</h2>
+<div class="gallery-grid">
+  <img src="images/wooden-doors/wooden-door-02.jpg" loading="lazy" alt="باب خشب 02">
+  <!-- تابع حتى wooden-door-19 -->
+</div>
 
-    <!-- صور المطابخ -->
-    <div class="gallery-item"><img src="images/kitchens/minimalist-kitchen-01.jpg" alt="مطبخ مينيمالي"></div>
+<!-- قسم التصاميم الداخلية -->
+<h2 id="interior">تصاميم داخلية</h2>
+<div class="gallery-grid">
+  <img src="images/interior-design/living-rooms/living-room-02.jpg" loading="lazy" alt="غرفة معيشة 02">
+  <!-- تابع حتى living-room-10 -->
+</div>
 
-    <!-- أبواب خشب -->
-    <div class="gallery-item"><img src="images/باب-خشب-02.jpg" alt="باب خشب 02"></div>
-    <div class="gallery-item"><img src="images/باب-خشب-03.jpg" alt="باب خشب 03"></div>
-    <div class="gallery-item"><img src="images/باب-خشب-04.jpg" alt="باب خشب 04"></div>
-    <div class="gallery-item"><img src="images/باب-خشب-05.jpg" alt="باب خشب 05"></div>
-    <div class="gallery-item"><img src="images/باب-خشب-06.jpg" alt="باب خشب 06"></div>
-    <div class="gallery-item"><img src="images/باب-خشب-07.jpg" alt="باب خشب 07"></div>
-    <div class="gallery-item"><img src="images/باب-خشب-08.jpg" alt="باب خشب 08"></div>
-    <div class="gallery-item"><img src="images/باب-خشب-09.jpg" alt="باب خشب 09"></div>
-    <div class="gallery-item"><img src="images/باب-خشب-10.jpg" alt="باب خشب 10"></div>
+<!-- قسم الأعمال الجبسية -->
+<h2 id="gypsum">أعمال جبسية</h2>
+<div class="gallery-grid">
+  <img src="images/interior-design/gypsum/gypsum-02.jpg" loading="lazy" alt="جبس 02">
+  <!-- تابع حتى gypsum-10 -->
+</div>
 
-    <!-- أبواب ألمنيوم -->
-    <div class="gallery-item"><img src="images/aluminum-door-02.jpg" alt="باب ألمنيوم 02"></div>
-    <div class="gallery-item"><img src="images/aluminum-door-03.jpg" alt="باب ألمنيوم 03"></div>
-    <div class="gallery-item"><img src="images/aluminum-door-04.jpg" alt="باب ألمنيوم 04"></div>
-    <div class="gallery-item"><img src="images/aluminum-door-05.jpg" alt="باب ألمنيوم 05"></div>
-    <div class="gallery-item"><img src="images/aluminum-door-06.jpg" alt="باب ألمنيوم 06"></div>
-    <div class="gallery-item"><img src="images/aluminum-door-07.jpg" alt="باب ألمنيوم 07"></div>
-    <div class="gallery-item"><img src="images/aluminum-door-08.jpg" alt="باب ألمنيوم 08"></div>
-    <div class="gallery-item"><img src="images/aluminum-door-09.jpg" alt="باب ألمنيوم 09"></div>
-    <div class="gallery-item"><img src="images/aluminum-door-10.jpg" alt="باب ألمنيوم 10"></div>
+<!-- قسم الحجر -->
+<h2 id="stone">الحجر الخارجي</h2>
+<div class="gallery-grid">
+  <img src="images/exterior-design/stone/stone-02.jpg" loading="lazy" alt="حجر 02">
+  <!-- تابع حتى stone-10 -->
+</div>
 
-  </div>
-</section>
 
   <!-- قسم طلبات العملاء -->
   <section class="client-requests">

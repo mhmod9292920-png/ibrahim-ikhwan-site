@@ -7,62 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
     body {
-    font-family: 'Cairo', sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-  }
-
-  .section-preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-
-  .section-preview a img {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .section-preview a img:hover {
-    transform: scale(1.05);
-  }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 15px;
-    margin-bottom: 40px;
-    padding: 0 20px;
-  }
-
-  .gallery-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .gallery-grid img:hover {
-    transform: scale(1.05);
-  }
-
-  h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #f0f0f0;
-  }
-</style>
- 
       font-family: 'Cairo', sans-serif;
       background-color: #1a1a1a;
       color: #fff;
@@ -104,15 +48,16 @@
       text-align: center;
       color: #ffd700;
       margin-bottom: 20px;
+      font-size: 26px;
     }
 
-    .services-list, .gallery-grid {
+    .services-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
-    .service-item, .gallery-item {
+    .service-item {
       background-color: #2a2a2a;
       padding: 20px;
       border-radius: 10px;
@@ -120,9 +65,44 @@
       text-align: center;
     }
 
-    .gallery-item img {
-      width: 100%;
+    .section-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .section-preview a img {
+      width: 200px;
+      height: auto;
       border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .section-preview a img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
     }
 
     .client-requests {
@@ -169,17 +149,16 @@
 </head>
 <body>
 
+  <!-- واجهة الموقع -->
   <header class="hero">
     <h1>مكتب الإبراهيم إخوان للعمران</h1>
     <p>تنفيذ كافة أعمال الإكساء والتصاميم الداخلية باحترافية عالية</p>
   </header>
 
-  <marquee behavior="scroll" direction="right">
-    عروض خاصة على الإكساء الكامل مع التصاميم الداخلية • خصومات موسمية • تنفيذ احترافي بأسعار منافسة
-  </marquee>
+  <marquee>تمديد الصحة والكهرباء - تلبيس السيراميك - أبواب ونوافذ - مطابخ ألمنيوم - واجهات رخام - ديكور جبسي - بدائل خشب ورخام - دهان ومعجونة</marquee>
 
-  <!-- قسم أعمالنا -->
-  <section id="our-work">
+  <!-- أعمالنا -->
+  <section id="services">
     <h2>أعمالنا</h2>
     <div class="services-list">
       <div class="service-item">تمديد الصحة والكهرباء</div>
@@ -194,72 +173,65 @@
     </div>
   </section>
 
-<!-- قسم الرخام -->
-<h2 id="marble">تصاميم الرخام</h2>
-<div class="gallery-grid">
-  <!-- marble-02 إلى marble-10 -->
-  <img src="images/interior-design/kitchens/marble/marble-02.jpg" loading="lazy" alt="رخام 02">
-  <img src="images/interior-design/kitchens/marble/marble-03.jpg" loading="lazy" alt="رخام 03">
-  <!-- تابع حتى marble-10 -->
-</div>
+  <!-- معرض الصور: معاينة -->
+  <section id="gallery-preview">
+    <h2>معرض الصور</h2>
+    <div class="section-preview">
+      <a href="#marble"><img src="images/interior-design/kitchens/marble/marble-01.jpg" alt="رخام"></a>
+      <a href="#aluminum"><img src="images/aluminum-doors/aluminum-door-01.jpg" alt="ألمنيوم"></a>
+      <a href="#wood"><img src="images/wooden-doors/wooden-door-01.jpg" alt="خشب"></a>
+      <a href="#interior"><img src="images/interior-design/living-rooms/living-room-01.jpg" alt="تصميم داخلي"></a>
+      <a href="#gypsum"><img src="images/interior-design/gypsum/gypsum-01.jpg" alt="جبس"></a>
+      <a href="#stone"><img src="images/exterior-design/stone/stone-01.jpg" alt="حجر"></a>
+    </div>
+  </section>
 
-<!-- قسم الألمنيوم -->
-<h2 id="aluminum">أبواب ألمنيوم</h2>
-<div class="gallery-grid">
-  <img src="images/aluminum-doors/aluminum-door-02.jpg" loading="lazy" alt="ألمنيوم 02">
-  <!-- تابع حتى aluminum-door-10 -->
-</div>
+  <!-- أقسام الصور -->
+  <section id="marble">
+    <h2>تصاميم الرخام</h2>
+    <div class="gallery-grid">
+      <img src="images/interior-design/kitchens/marble/marble-02.jpg" alt="رخام 02">
+      <img src="images/interior-design/kitchens/marble/marble-03.jpg" alt="رخام 03">
+      <!-- تابع حتى marble-10 -->
+    </div>
+  </section>
 
-<!-- قسم أبواب خشب -->
-<h2 id="wood">أبواب خشبية</h2>
-<div class="gallery-grid">
-  <img src="images/wooden-doors/wooden-door-02.jpg" loading="lazy" alt="باب خشب 02">
-  <!-- تابع حتى wooden-door-19 -->
-</div>
+  <section id="aluminum">
+    <h2>أبواب ألمنيوم</h2>
+    <div class="gallery-grid">
+      <img src="images/aluminum-doors/aluminum-door-02.jpg" alt="ألمنيوم 02">
+      <!-- تابع حتى aluminum-door-10 -->
+    </div>
+  </section>
 
-<!-- قسم التصاميم الداخلية -->
-<h2 id="interior">تصاميم داخلية</h2>
-<div class="gallery-grid">
-  <img src="images/interior-design/living-rooms/living-room-02.jpg" loading="lazy" alt="غرفة معيشة 02">
-  <!-- تابع حتى living-room-10 -->
-</div>
+  <section id="wood">
+    <h2>أبواب خشبية</h2>
+    <div class="gallery-grid">
+      <img src="images/wooden-doors/wooden-door-02.jpg" alt="باب خشب 02">
+      <!-- تابع حتى wooden-door-19 -->
+    </div>
+  </section>
 
-<!-- قسم الأعمال الجبسية -->
-<h2 id="gypsum">أعمال جبسية</h2>
-<div class="gallery-grid">
-  <img src="images/interior-design/gypsum/gypsum-02.jpg" loading="lazy" alt="جبس 02">
-  <!-- تابع حتى gypsum-10 -->
-</div>
+  <section id="interior">
+    <h2>تصاميم داخلية</h2>
+    <div class="gallery-grid">
+      <img src="images/interior-design/living-rooms/living-room-02.jpg" alt="غرفة معيشة 02">
+      <!-- تابع حتى living-room-10 -->
+    </div>
+  </section>
 
-<!-- قسم الحجر -->
-<h2 id="stone">الحجر الخارجي</h2>
-<div class="gallery-grid">
-  <img src="images/exterior-design/stone/stone-02.jpg" loading="lazy" alt="حجر 02">
-  <!-- تابع حتى stone-10 -->
-</div>
+  <section id="gypsum">
+    <h2>أعمال جبسية</h2>
+    <div class="gallery-grid">
+      <img src="images/interior-design/gypsum/gypsum-02.jpg" alt="جبس 02">
+      <!-- تابع حتى gypsum-10 -->
+    </div>
+  </section>
 
-
-  <!-- قسم طلبات العملاء -->
-  <section class="client-requests">
-    <h2>طلبات العملاء</h2>
-    <p>يرجى تعبئة النموذج وسنتواصل معك عبر واتساب</p>
-    <form id="whatsapp-form">
-      <label for="name">الاسم الكامل:</label>
-      <input type="text" id="name" required>
-
-      <label for="phone">رقم الهاتف أو واتساب:</label>
-      <input type="text" id="phone" required>
-
-      <label for="service">نوع الخدمة المطلوبة:</label>
-      <select id="service">
-        <option value="تشطيب كامل">تشطيب كامل</option>
-        <option value="ديكور داخلي">ديكور داخلي</option>
-        <option value="أبواب ونوافذ">أبواب ونوافذ</option>
-        <option value="رخام وغرانيت">رخام وغرانيت</option>
-        <option value="مطابخ ألمنيوم">مطابخ ألمنيوم</option>
-        <option value="أخرى">أخرى</option>
-      </select>
-
+  <section id="stone">
+    <h2>الحجر الخارجي</h2>
+    <div class="gallery-grid">
+      <img src="images/ex
       <label for="details">تفاصيل إضافية:</label>
       <textarea id="details" rows="5" required></textarea>
 

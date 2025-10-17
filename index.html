@@ -6,8 +6,6 @@
   <title>مكتب الإبراهيم إخوان للعمران</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
-
-    /* ===== إعداد عام ===== */
     body {
       font-family: 'Cairo', sans-serif;
       background-color: #1a1a1a;
@@ -15,62 +13,49 @@
       margin: 0;
       padding: 0;
     }
-.hero-background {
- background-image: url('images/interior-design/interior-design1-min.jpg');
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .hero-background {
+      background-image: url('images/interior-design/interior-design1-min.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* طبقة شفافة فوق الصورة */
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-}
-
-.overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.overlay p {
-  font-size: 1.5rem;
-}
-
-    /* ===== رأس الصفحة ===== */
-    header.hero {
-      background: linear-gradient(to right, #2a2a2a, #1a1a1a);
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
       text-align: center;
-      padding: 40px 20px;
+    }
+
+    .overlay h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
       color: #ffd700;
     }
 
-    header.hero h1 {
-      margin-bottom: 10px;
-      font-size: 32px;
-    }
-
-    header.hero p {
-      font-size: 18px;
+    .overlay p {
+      font-size: 1.5rem;
       color: #ccc;
     }
 
-    marquee {
-      background-color: #222;
-      color: #ffd700;
+    nav {
+      background-color: #2a2a2a;
       padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #ffd700;
+      text-decoration: none;
       font-weight: bold;
     }
 
-    /* ===== الأقسام ===== */
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -86,7 +71,6 @@
       margin-bottom: 30px;
     }
 
-    /* ===== قائمة الخدمات ===== */
     .services-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -101,76 +85,15 @@
       text-align: center;
     }
 
-    /* ===== شريط التنقل للمعرض ===== */
-    .gallery-nav {
-      text-align: center;
-      margin-bottom: 30px;
-      background-color: #2a2a2a;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    .gallery-nav a {
-      margin: 0 10px;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-
-    .gallery-nav a:hover {
-      color: #fff;
-    }
-
-    /* ===== معاينة الصور ===== */
-    .section-preview {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
-
-    .section-preview a {
-      text-decoration: none;
-      display: inline-block;
-      width: 200px;
-    }
-
-    .section-preview a img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .section-preview a img:hover {
-      transform: scale(1.05);
-    }
-
-    .section-preview p {
-      margin-top: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #ffd700;
-      text-align: center;
-    }
-
-    /* ===== شبكة الصور ===== */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 15px;
-      margin-bottom: 40px;
       padding: 0 20px;
     }
 
     .gallery-grid img {
       width: 100%;
-      height: auto;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
@@ -180,7 +103,6 @@
       transform: scale(1.05);
     }
 
-    /* ===== نموذج الطلب ===== */
     .client-requests {
       background-color: #2a2a2a;
       padding: 30px;
@@ -224,207 +146,76 @@
     }
   </style>
 </head>
+<body>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مكتب الإبراهيم إخوان للعمران</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-  <style>
-    /* ===== إعداد عام ===== */
-    body {
-  <nav class="gallery-nav">
-  <a href="#marble">رخام</a>
-  <a href="#aluminum">ألمنيوم</a>
-  <a href="#wood">خشب</a>
-  <a href="#interior">تصميم داخلي</a>
-  <a href="#gypsum">جبس</a>
-  <a href="#stone">حجر</a>
-</nav>
+  <div class="hero-background">
+    <div class="overlay">
+      <h1>مكتب الإبراهيم إخوان للعمران</h1>
+      <p>تنفيذ كافة أعمال الإكساء والتصاميم الداخلية باحترافية عالية</p>
+    </div>
+  </div>
 
-<nav style="position: sticky; top: 0; background-color: #1a1a1a; padding: 10px 20px; z-index: 1000; text-align: center; border-bottom: 1px solid #444;">
-  <a href="#services" style="margin: 0 15px; color: #ffd700; text-decoration: none;">أعمالنا</a>
-  <a href="#gallery-preview" style="margin: 0 15px; color: #ffd700; text-decoration: none;">معرض الصور</a>
-  <a href="#client-form" style="margin: 0 15px; color: #25D366; font-weight: bold; text-decoration: none;">📢 عرض الإكساء الكامل</a>
-  <a href="#contact" style="margin: 0 15px; color: #ffd700; text-decoration: none;">اتصل بنا</a>
-</nav>
+  <nav>
+    <a href="#services">أعمالنا</a>
+    <a href="#gallery">معرض الصور</a>
+    <a href="#client-form">طلب عرض</a>
+    <a href="#contact">اتصل بنا</a>
+  </nav>
 
-
-  <!-- واجهة الموقع -->
-  <header class="hero">
-    <h1>مكتب الإبراهيم إخوان للعمران</h1>
-    <p>تنفيذ كافة أعمال الإكساء والتصاميم الداخلية باحترافية عالية</p>
-  </header>
-
-  <marquee>تمديد الصحة والكهرباء - تلبيس السيراميك - أبواب ونوافذ - مطابخ ألمنيوم - واجهات رخام - ديكور جبسي - بدائل خشب ورخام - دهان ومعجونة</marquee>
-
-  <!-- أعمالنا -->
   <section id="services">
     <h2>أعمالنا</h2>
     <div class="services-list">
       <div class="service-item">تمديد الصحة والكهرباء</div>
-      <div class="service-item">الياسة والطينة</div>
-      <div class="service-item">تلبيس السيراميك للجدران والأرضيات</div>
-      <div class="service-item">تفصيل وتركيب الأبواب والنوافذ الخشبية</div>
-      <div class="service-item">مطابخ ألمنيوم هاي غلوس</div>
-      <div class="service-item">واجهات رخام وغرانيت طبيعي وصناعي</div>
-      <div class="service-item">ديكور جبسي وبلاستيكي</div>
-      <div class="service-item">بدائل خشب، رخام، سيراميك، شيبورد</div>
-      <div class="service-item">دهان ومعجونة وديكوراتها</div>
+      <div class="service-item">تلبيس السيراميك</div>
+      <div class="service-item">مطابخ ألمنيوم</div>
+      <div class="service-item">واجهات رخام</div>
+      <div class="service-item">ديكور جبسي</div>
+      <div class="service-item">بدائل خشب ورخام</div>
+      <div class="service-item">دهان ومعجونة</div>
     </div>
   </section>
 
-  <!-- معرض الصور: معاينة -->
-  <section id="gallery-preview">
+  <section id="gallery">
     <h2>معرض الصور</h2>
-    <div class="section-preview">
-      <a href="#marble"><img src="images/interior-design/kitchens/marble/marble-01.jpg" alt="رخام"></a>
-      <a href="#aluminum"><img src="images/aluminum-doors/aluminum-door-01.jpg" alt="ألمنيوم"></a>
-      <a href="#wood"><img src="images/wooden-doors/wooden-door-01.jpg" alt="خشب"></a>
-      <a href="#interior"><img src="images/interior-design/living-rooms/living-room-01.jpg" alt="تصميم داخلي"></a>
-      <a href="#gypsum"><img src="images/interior-design/gypsum/gypsum-01.jpg" alt="جبس"></a>
-      <a href="#stone"><img src="images/exterior-design/stone/stone-01.jpg" alt="حجر"></a>
-    </div>
-  </section>
-
-  <!-- أقسام الصور -->
-  <section id="marble">
-    <h2>تصاميم الرخام</h2>
     <div class="gallery-grid">
-      <img src="images/interior-design/kitchens/marble/marble-02.jpg" alt="رخام 02">
-      <img src="images/interior-design/kitchens/marble/marble-03.jpg" alt="رخام 03">
-      <!-- تابع حتى marble-10 -->
+      <img src="images/interior-design/interior-design1-min.jpg" alt="تصميم داخلي">
+      <!-- أضف المزيد من الصور هنا -->
     </div>
   </section>
 
-  <section id="aluminum">
-    <h2>أبواب ألمنيوم</h2>
-    <div class="gallery-grid">
-      <img src="images/aluminum-doors/aluminum-door-02.jpg" alt="ألمنيوم 02">
-      <!-- تابع حتى aluminum-door-10 -->
+  <section id="client-form">
+    <h2>طلب عرض</h2>
+    <form class="client-requests">
+      <label for="name">الاسم الكامل:</label>
+      <input type="text" id="name" required>
+
+      <label for="phone">رقم الهاتف:</label>
+      <input type="tel" id="phone" required>
+
+      <label for="request">نوع الطلب:</label>
+      <select id="request" required>
+        <option value="">اختر نوع الطلب</option>
+        <option value="رخام">رخام</option>
+        <option value="جبس">جبس</option>
+        <option value="ألمنيوم">ألمنيوم</option>
+      </select>
+
+      <label for="details">تفاصيل إضافية:</label>
+      <textarea id="details" rows="5" required></textarea>
+
+      <button type="submit">📤 إرسال الطلب</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>اتصل بنا</h2>
+    <div class="client-requests">
+      <p>📍 دمشق - بيت سحم</p>
+      <p>📞 محمد الإبراهيم: <a href="tel:+963995607888" style="color:#25D366;">00963 995 607 888</a></p>
+      <p>📞 عبدالله الإبراهيم: <a href="tel:+963980007563" style="color:#25D366;">00963 980 007 563</a></p>
+      <p>📧 البريد الإلكتروني: <a href="mailto:mhmod9292920@gmail.com" style="color:#ffd700;">mhmod9292920@gmail.com</a></p>
     </div>
   </section>
 
-  <section id="wood">
-    <h2>أبواب خشبية</h2>
-    <div class="gallery-grid">
-      <img src="images/wooden-doors/wooden-door-02.jpg" alt="باب خشب 02">
-      <!-- تابع حتى wooden-door-19 -->
-    </div>
-  </section>
-
-  <section id="interior">
-    <h2>تصاميم داخلية</h2>
-    <div class="gallery-grid">
-      <img src="images/interior-design/living-rooms/living-room-02.jpg" alt="غرفة معيشة 02">
-      <!-- تابع حتى living-room-10 -->
-    </div>
-  </section>
-
-  <section id="gypsum">
-    <h2>أعمال جبسية</h2>
-    <div class="gallery-grid">
-      <img src="images/interior-design/gypsum/gypsum-02.jpg" alt="جبس 02">
-      <!-- تابع حتى gypsum-10 -->
-    </div>
-  </section>
-
- <section id="stone">
-  <h2>الحجر الخارجي</h2>
-  <div class="gallery-grid">
-    <img src="images/exterior-design/stone/stone-02.jpg" alt="حجر 02">
-    <!-- تابع حتى stone-10 -->
-  </div>
-</section>
-
-<div style="background-color: #ffd700; color: #1a1a1a; text-align: center; padding: 15px; font-weight: bold; font-size: 18px; margin: 40px auto; max-width: 800px; border-radius: 8px;">
-  🎉 عرض خاص: احصل على <span style="color: red;">خصم 10%</span> على الإكساء الكامل عند تقديم طلبك اليوم!
-</div>
-     
-
-
-<section id="contact">
-  <h2>اتصل بنا</h2>
-  <div class="client-requests">
-    <p>📍 الموقع: دمشق - بيت سحم</p>
-
-    <p>📞 محمد الإبراهيم: 
-      <a href="tel:+963995607888" style="color:#25D366;">00963 995 607 888</a>
-    </p>
-
-    <p>📞 عبدالله الإبراهيم: 
-      <a href="tel:+963980007563" style="color:#25D366;">00963 980 007 563</a>
-    </p>
-
-    <p>📧 البريد الإلكتروني: 
-      <a href="mailto:mhmod9292920@gmail.com" style="color:#ffd700;">mhmod9292920@gmail.com</a>
-    </p>
-
-    <p>💬 واتساب مباشر: 
-      <a href="https://wa.me/963995607888" target="_blank" style="color:#25D366;">تواصل مع محمد الإبراهيم</a><br>
-      <a href="https://wa.me/963980007563" target="_blank" style="color:#25D366;">تواصل مع عبدالله الإبراهيم</a>
-    </p>
-  </div>
-</section>
-
-<section id="client-form">
-  <h2>طلبات العملاء</h2>
-  <form id="whatsapp-form" class="client-requests">
-    <label for="name">الاسم الكامل:</label>
-    <input type="text" id="name" placeholder="اكتب اسمك هنا" required>
-
-    <label for="phone">رقم الهاتف:</label>
-    <input type="tel" id="phone" placeholder="مثال: 00963xxxxxxxxx" required>
-
-    <label for="request">نوع الطلب:</label>
-    <select id="request" required>
-      <option value="">اختر نوع الطلب</option>
-      <option value="تمديد الصحة والكهرباء">تمديد الصحة والكهرباء</option>
-      <option value="تلبيس سيراميك">تلبيس سيراميك</option>
-      <option value="أبواب ونوافذ خشبية">أبواب ونوافذ خشبية</option>
-      <option value="مطابخ ألمنيوم">مطابخ ألمنيوم</option>
-      <option value="واجهات رخام">واجهات رخام</option>
-      <option value="ديكور جبسي">ديكور جبسي</option>
-      <option value="بدائل خشب ورخام">بدائل خشب ورخام</option>
-      <option value="دهان ومعجونة">دهان ومعجونة</option>
-      <option value="عرض على الإكساء الكامل">عرض على الإكساء الكامل</option>
-    </select>
-
-    <label for="details">تفاصيل إضافية:</label>
-    <textarea id="details" rows="5" placeholder="اكتب أي تفاصيل أو ملاحظات إضافية..." required></textarea>
-
-    <label for="recipient">اختر الشخص الذي تريد إرسال الطلب إليه:</label>
-    <select id="recipient" required>
-      <option value="">اختر المستلم</option>
-      <option value="963995607888">محمد الإبراهيم</option>
-      <option value="963980007563">عبدالله الإبراهيم</option>
-    </select>
-
-    <button type="submit">📤 إرسال الطلب عبر واتساب</button>
-  </form>
-</section>
-
-<script>
-  document.getElementById("whatsapp-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const request = document.getElementById("request").value;
-    const details = document.getElementById("details").value.trim();
-    const recipient = document.getElementById("recipient").value;
-
-    if (!recipient) {
-      alert("يرجى اختيار الشخص الذي تريد إرسال الطلب إليه.");
-      return;
-    }
-
-    const message = `طلب جديد من العميل:%0A👤 الاسم: ${name}%0A📞 الهاتف: ${phone}%0A🛠️ نوع الطلب: ${request}%0A📝 تفاصيل إضافية: ${details}`;
-    alert("✅ تم تجهيز الطلب وسيتم فتح واتساب الآن.");
-    window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(message)}`, "_blank");
-  });
-</script>
-      
 </body>
 </html>
-
- 
-

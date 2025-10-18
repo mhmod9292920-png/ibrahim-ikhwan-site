@@ -4,9 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مكتب الإبراهيم إخوان للعمران</title>
+
+  <!-- استدعاء خط Cairo من Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
+  <!-- وصف الموقع لمحركات البحث -->
+  <meta name="description" content="مكتب الإبراهيم إخوان للعمران في دمشق يقدم خدمات احترافية في أعمال الإكساء والتصاميم الداخلية والخارجية، بما في ذلك واجهات حجرية، مطابخ ألمنيوم، ديكور جبسي، بدائل خشب ورخام، وتمديدات صحية وكهربائية. اطلب عرضك الآن وتواصل معنا مباشرة.">
+
+  <!-- كلمات مفتاحية -->
+  <meta name="keywords" content="مقاولات دمشق, واجهات حجرية, ديكور داخلي, مطابخ ألمنيوم, بدائل خشب, أعمال إكساء, تصميم داخلي, ديكور جبسي, تنفيذ مشاريع عمرانية">
+
+  <!-- اسم صاحب الموقع -->
+  <meta name="author" content="محمد الإبراهيم">
+
   <style>
     body {
+      body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* شريط العروض */
+.promo-bar {
+  width: 100%;
+  background-color: #ffcc00;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  direction: rtl;
+}
+
+.promo-bar p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+}
+
+.promo-bar p:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+      
+      font-family: 'Cairo', sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- محتوى الموقع يبدأ هنا -->
+</body>
+</html>
+
       font-family: 'Cairo', sans-serif;
       background-color: #1a1a1a;
       color: #fff;
@@ -147,7 +212,6 @@
   </style>
 </head>
 <body>
-
   <div class="hero-background">
     <div class="overlay">
       <h1>مكتب الإبراهيم إخوان للعمران</h1>
@@ -161,7 +225,51 @@
     <a href="#client-form">طلب عرض</a>
     <a href="#contact">اتصل بنا</a>
   </nav>
+<body>
+  <!-- قسم من نحن -->
+  <section class="about-us" style="padding: 60px; text-align: center;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">من نحن</h2>
+    <p style="font-size: 1.2rem; line-height: 1.8;">
+      نحن مكتب الإبراهيم إخوان للعمران، نعمل في دمشق بخبرة تمتد لسنوات في تنفيذ مشاريع الإكساء والتصميم الداخلي والخارجي. نتميز بالدقة، الاحترافية، والاهتمام بأدق التفاصيل لنقدم لك أفضل الحلول العمرانية.
+    </p>
+  </section>
+ <!-- شريط العروض المتحرك -->
+<div class="promo-bar">
+  <p>🔥 عرض خاص على الإكساء الكامل – حسم 10% لفترة محدودة 🔥</p>
+</div>
 
+<style>
+  .promo-bar {
+    width: 100%;
+    background-color: #ffcc00;
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    direction: rtl;
+  }
+
+  .promo-bar p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 15s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+ 
+
+  <!-- قسم أعمالنا -->
   <section id="services">
     <h2>أعمالنا</h2>
     <div class="services-list">
@@ -174,6 +282,8 @@
       <div class="service-item">دهان ومعجونة</div>
     </div>
   </section>
+</body>
+</html>
 
  <!-- قسم معرض الصور: التصاميم الداخلية -->
 <section id="gallery">
@@ -189,22 +299,6 @@
     <img src="images/interior-design/interior-design7.jpg" alt="تصميم داخلي 7">
     <img src="images/interior-design/interior-hero.jpg" alt="خلفية تصميم داخلي">
     <img src="images/interior-design/interior-hero1.jpg" alt="خلفية تصميم داخلي إضافية">
-  </div>
-</section>
-
-<section id="stone-wall">
-  <h2>واجهات حجرية</h2>
-  <div class="gallery-grid">
-    <img src="images/stone-wall/stonewall01.jpg" alt="واجهة حجرية 1">
-    <img src="images/stone-wall/stonewall02.jpg" alt="واجهة حجرية 2">
-    <img src="images/stone-wall/stonewall03.jpg" alt="واجهة حجرية 3">
-    <img src="images/stone-wall/stonewall04.jpg" alt="واجهة حجرية 4">
-    <img src="images/stone-wall/stonewall05.jpg" alt="واجهة حجرية 5">
-    <img src="images/stone-wall/stonewall06.jpg" alt="واجهة حجرية 6">
-    <img src="images/stone-wall/stonewall07.jpg" alt="واجهة حجرية 7">
-    <img src="images/stone-wall/stonewall08.jpg" alt="واجهة حجرية 8">
-    <img src="images/stone-wall/stonewall09.jpg" alt="واجهة حجرية 9">
-    <img src="images/stone-wall/stonewall10.jpg" alt="واجهة حجرية 10">
   </div>
 </section>
 

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mhmod9292920-png.github.io/ibrahim-ikhwan-site/sitemap.xml

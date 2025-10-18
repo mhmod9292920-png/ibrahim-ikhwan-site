@@ -18,7 +18,13 @@
   <meta name="author" content="محمد الإبراهيم">
 
   <style>
-    body {
+  /* تنسيقات أساسية للصفحة */
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 /* شريط العروض */
@@ -29,7 +35,7 @@
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
-padding: 10px 0;
+  padding: 10px 0;
   font-size: 1.2rem;
   font-weight: bold;
   direction: rtl;
@@ -52,29 +58,11 @@ padding: 10px 0;
   100% {
     transform: translateX(-100%);
   }
-      
-      font-family: 'Cairo', sans-serif;
-      background-color: #1a1a1a;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-</head>
-<body>
-  <!-- محتوى الموقع يبدأ هنا -->
-</body>
-</html>
+}
 
-      font-family: 'Cairo', sans-serif;
-      background-color: #1a1a1a;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-
-   .hero-background {
- background-image: url('images/interior-design/interior-hero.jpg');
+/* خلفية البطل */
+.hero-background {
+  background-image: url('images/interior-design/interior-hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,125 +72,134 @@ padding: 10px 0;
   justify-content: center;
 }
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 40px;
-      border-radius: 10px;
-      text-align: center;
-    }
+/* طبقة التعتيم */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
 
-    .overlay h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #ffd700;
-    }
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
 
-    .overlay p {
-      font-size: 1.5rem;
-      color: #ccc;
-    }
+.overlay p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
 
-    nav {
-      background-color: #2a2a2a;
-      padding: 10px;
-      text-align: center;
-    }
+/* شريط التنقل */
+nav {
+  background-color: #2a2a2a;
+  padding: 10px;
+  text-align: center;
+}
 
-    nav a {
-      margin: 0 15px;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav a {
+  margin: 0 15px;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* الأقسام */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    section h2 {
-      text-align: center;
-      color: #ffd700;
-      font-size: 28px;
-      border-bottom: 2px solid #444;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
+section h2 {
+  text-align: center;
+  color: #ffd700;
+  font-size: 28px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
 
-    .services-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+/* قائمة الخدمات */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .service-item {
-      background-color: #2a2a2a;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #444;
-      text-align: center;
-    }
+.service-item {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  text-align: center;
+}
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 15px;
-      padding: 0 20px;
-    }
+/* معرض الصور */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 0 20px;
+}
 
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
 
-    .gallery-grid img:hover {
-      transform: scale(1.05);
-    }
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
 
-    .client-requests {
-      background-color: #2a2a2a;
-      padding: 30px;
-      border-radius: 10px;
-      border: 2px solid #ffd700;
-      max-width: 600px;
-      margin: 40px auto;
-    }
+/* نموذج الطلب والتواصل */
+.client-requests {
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #ffd700;
+  max-width: 600px;
+  margin: 40px auto;
+}
 
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
 
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: none;
-      background-color: #444;
-      color: #fff;
-    }
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+}
 
-    button {
-      margin-top: 20px;
-      padding: 12px;
-      background-color: #25D366;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      width: 100%;
-      transition: background-color 0.3s ease;
-    }
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
 
-    button:hover {
-      background-color: #1da851;
-    }
+button:hover {
+  background-color: #1da851;
+}
+ 
   </style>
 </head>
 <body>
